@@ -7,7 +7,7 @@ public class B13241_최소공배수 {
     static long n;
     static long m;
 
-    // 뉴클리드 호제법
+    // 유클리드 호제법
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
