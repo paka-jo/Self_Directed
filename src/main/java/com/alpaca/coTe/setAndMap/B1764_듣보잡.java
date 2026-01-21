@@ -1,4 +1,4 @@
-package com.alpaca.coTe.Divisors_multiple_prime_numbers;
+package com.alpaca.coTe.setAndMap;
 
 import java.io.BufferedReader;
 import java.io.IOException;
