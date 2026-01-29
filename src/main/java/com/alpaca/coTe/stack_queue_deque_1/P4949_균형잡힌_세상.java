@@ -1,4 +1,4 @@
-package com.alpaca.coTe;
+package com.alpaca.coTe.stack_queue_deque_1;
 
 import java.util.Scanner;
 import java.util.Stack;
