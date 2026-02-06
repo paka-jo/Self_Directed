@@ -1,4 +1,4 @@
-package com.alpaca.coTe;
+package com.alpaca.coTe.algorithm_bruteFroce_510;
 
 import java.io.BufferedReader;
 import java.io.IOException;
