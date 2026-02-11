@@ -1,4 +1,4 @@
-package com.alpaca.coTe.algorithm_bruteFroce_510;
+package com.alpaca.coTe.algorithm_basic.bruteFroce_510;
 
 import java.util.Scanner;
 

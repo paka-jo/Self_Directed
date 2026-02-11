@@ -1,4 +1,4 @@
-package com.alpaca.coTe.algorithm_bruteFroce_510;
+package com.alpaca.coTe.algorithm_basic.bruteFroce_510;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,10 +6,12 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class B15657_N과M_8 {
+public class B15655_N과M_6 {
 
-    static int arr[];
     static int num[];
+    static int arr[];
+    static boolean isUsed[];
+
     static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
@@ -20,25 +22,27 @@ public class B15657_N과M_8 {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
 
-        arr = new int[m];
         num = new int[n];
+        arr = new int[m];
+        isUsed = new boolean[n];
 
         st = new StringTokenizer(br.readLine());
-        for(int i=0; i<n; i++){
+        for (int i = 0; i < n; i++) {
             num[i] = Integer.parseInt(st.nextToken());
         }
 
         Arrays.sort(num);
 
-        fun(n,m,0);
+        fun(n, m, 0);
+
         System.out.println(sb);
     }
 
-    static void fun(int n,int m,int dept){
-        if(dept == m){
-            for(int i=0;i<m; i++){
-                for(int j=0;j<m-1; j++){
-                    if(arr[j]>arr[j+1]){
+    static void fun(int n, int m, int dept) {
+        if (m == dept) {
+            for (int i = 0; i < m; i++) {
+                for(int j = 0; j <m-1; j++) {
+                    if(arr[j] >arr[j+1]){
                         return;
                     }
                 }
@@ -47,10 +51,13 @@ public class B15657_N과M_8 {
             sb.append('\n');
             return;
         }
-
-        for(int i=0; i<n; i++){
-            arr[dept] = num[i];
-            fun(n,m,dept+1);
+        for (int i = 0; i < n; i++) {
+            if(!isUsed[i]) {
+                isUsed[i] = true;
+                arr[dept] = num[i];
+                fun(n, m, dept + 1);
+                isUsed[i] = false;
+            }
         }
     }
 }
