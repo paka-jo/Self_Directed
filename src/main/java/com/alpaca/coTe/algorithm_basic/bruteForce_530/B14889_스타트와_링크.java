@@ -10,7 +10,7 @@ public class B14889_스타트와_링크 {
     static int n;
     static int[][] ability;
     static boolean[] isVisited;
-    static int min;
+    static int min = Integer.MAX_VALUE;
 
 
     public static void main(String[] args) throws IOException {
